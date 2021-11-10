@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    gap: 10px;
+    width: 90vw;
+    justify-content: center;
+    align-content: center;
+}
+
+.panel {
+    flex: 0.1;
+    height: 80vh;
+    border-radius: 50px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    cursor: pointer;
+}
+
+.panel h3 {
+    color: rgb(238, 144, 144);
+    font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
+    top: 20em;
+    left: 1em;
+    opacity: 0;
+    text-align: center;
+    transition: opacity 0.7s ease-in 0.35s;
+}
+
+.panel.active {
+    flex: 0.5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+}
